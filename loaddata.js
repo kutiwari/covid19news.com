@@ -9,7 +9,7 @@ function renderWHOArticles(ulId, items) {
         x.appendChild(t);
         li.appendChild(x);
         x.setAttribute("class", "glyphicon glyphicon-arrow-right");
-        x.setAttribute("onclick", "javascript:onLinkClick('"+item.childNodes[1].textContent+"')");
+        //x.setAttribute("onclick", "javascript:onLinkClick('"+item.childNodes[1].textContent+"')");
         ul.appendChild(li);
         }
 }
@@ -48,7 +48,7 @@ function renderCDCArticles(ulId, items) {
         x.appendChild(t);
         li.appendChild(x);
         x.setAttribute("class", "glyphicon glyphicon-arrow-right");
-        x.setAttribute("onclick", "javascript:onLinkClick('"+item.childNodes[5].textContent+"')");
+        //x.setAttribute("onclick", "javascript:onLinkClick('"+item.childNodes[5].textContent+"')");
         ul.appendChild(li);
         }
 }
