@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex,nofollow" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Corona  COVID-19</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/loaddata.js"></script>
+  </head>
+  <body onload="loadWHOArticles(), loadCDCNews()">
+  
+  <section id="center" class="clearfix">
+	     <div class="col-sm-12">
+		<!-- Carousel -->
+    	   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+			  	<li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
+			</ol>
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+			    <div class="item">
+			    	<img src="img/corona-banner1.jpeg" alt="COVID-19">
+                   
+			    </div>
+			    <div class="item">
+			    	<img src="img/corona-banner2.png" alt="Symptoms">
+			    	
+			    </div>
+			    <div class="item active">
+			    	<img src="img/corona-banner3.jpeg" alt="Virus">
+			    
+			    </div>
+			</div>
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+		    	<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+		    	<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div><!-- /carousel -->
+		 </div>
+  </section>
+  
+  <section id="product">
+    <div class="container-fluid">
+	 <div class="row">
+	  <div class="col-sm-12 product_main">
+	    <div class="col-sm-4">
+		 <div class="product_1">
+                     <a href="javascript:onLinkClick('https://www.who.int/')"><img src ="img/who_icon.jpeg" />  </a>
+		 </div>
+		</div>
+		<div class="col-sm-4 product_2">
+		 <div class="product_1 border_none_1">
+                     <a href="javascript:onLinkClick('https://www.cdc.gov/')"><img src ="img/CDC_logo.png" /></a>
+		 </div>
+		</div>
+		<div class="col-sm-4 product_2">
+		 <div class="product_1 border_none_1">
+		  <a href="#"><i class="fa fa-dollar"></i> To Be Done</a>
+		 </div>
+		</div>
+	  </div>
+	  <div class="col-sm-12 product_3">
+	   <div class="col-sm-4">
+	     <div class="product_3_inner">
+		   <h3><i class="fa fa-list"></i> WHO News and Guidelines </h3>          
+		   <ul id="WHOArticles">			
+		   </ul>
+		 </div>
+	   </div>
+	   <div class="col-sm-4">
+	     <div class="product_3_inner">
+		   <h3><i class="fa fa-list"></i> CDC News and Guidelines </h3>             
+		   <ul id="CDCArticles">			        		
+		   </ul>
+		 </div>
+	   </div>
+	   <div class="col-sm-4">
+	     <div class="product_3_inner">
+		   <h3><i class="fa fa-list"></i> To Be Done </h3>            
+		   <ul id="TBD">			                	
+		   </ul>
+		 </div>
+	   </div>
+	  </div>
+	 </div>
+	</div>
+  </section>
+  
+  
+<!-- //for menu -->		          
+  <script>
+$(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown(0);
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp(0);
+            $(this).toggleClass('open');       
+        }
+    );
+	
+	/*****Fixed Menu******/
+	var secondaryNav = $('.cd-secondary-nav'),
+	   secondaryNavTopPosition = secondaryNav.offset().top;
+		$(window).on('scroll', function(){
+			if($(window).scrollTop() > secondaryNavTopPosition ) {
+				secondaryNav.addClass('is-fixed');	
+			} else {
+				secondaryNav.removeClass('is-fixed');
+			}
+		});	
+		
+});
+	</script>	  
+<!-- //for menu -->	
+  </body>
+       
+</html>
